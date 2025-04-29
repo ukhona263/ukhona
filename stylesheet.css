@@ -1,0 +1,316 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Container */
+.header-container {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Main Container */
+.main-container {
+    padding: 80px 20px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Containers */
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Page-Specific Styles */
+.index-container .welcome-container {
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-container input,
+.contact-container textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-container button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-container button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+.footer-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+}
+
+/* Style images as containers in the intro section */
+.intro-container img {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+/* Feedback Form Styles */
+.feedback-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px; /* Limits form width for readability */
+    margin: 0 auto; /* Centers the form */
+}
+
+.feedback-container label {
+    font-weight: bold;
+}
+
+.feedback-container input,
+.feedback-container textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.feedback-container button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.feedback-container button:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+/* Tablets (max-width: 900px) */
+@media screen and (max-width: 900px) {
+    .main-container {
+        padding: 100px 15px 15px; /* Increased top padding for header */
+    }
+
+    .header-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px; /* Tight gap for stacking */
+        width: 100%; /* Full width for block layout */
+    }
+
+    nav ul li {
+        width: 100%; /* Each item takes full width */
+    }
+
+    nav ul li a {
+        display: block; /* Block format */
+        padding: 10px; /* Consistent padding */
+        font-size: 1rem; /* Slightly smaller text */
+        text-align: center; /* Centered text */
+        background-color: #444; /* Slight background for distinction */
+        border-radius: 5px; /* Keep rounded edges */
+    }
+
+    nav ul li a:hover {
+        background-color: #666; /* Adjusted hover color */
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+}
+
+/* Smartphones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .main-container {
+        padding: 120px 10px 10px; /* Increased top padding for taller header */
+    }
+
+    .header-container {
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 4px; /* Even tighter gap */
+        width: 80%; /* Full width */
+    }
+
+    nav ul li {
+        width: 80%; /* Full width for each item */
+    }
+
+    nav ul li a {
+        display: inline-block; /* Block format */
+        padding: 8px; /* Compact padding */
+        font-size: 0.9rem; /* Smaller text for fit */
+        text-align: center;
+        background-color: #444; /* Distinct background */
+        border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+        background-color: #666;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .container {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .container h2 {
+        font-size: 1.6rem;
+    }
+
+    .container h3 {
+        font-size: 1.3rem;
+    }
+
+    .card {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}
